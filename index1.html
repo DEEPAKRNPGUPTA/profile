@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deepak Gupta | Corporate Trainer, Mentor & Consultant</title>
+  <meta name="description" content="Deepak Gupta - Executive Corporate Trainer, Mentor and Consultant specializing in AI, GenAI, Agentic AI, .NET, Azure, Integration, Retail IT and Data." />
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --ink: #172033;
+      --muted: #647086;
+      --brand: #0f3d5f;
+      --accent: #d49a2a;
+      --soft: #e9eef5;
+      --line: #d8e0eb;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: radial-gradient(circle at top left, #ffffff 0, var(--bg) 45%, #edf2f8 100%);
+      line-height: 1.55;
+    }
+
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 36px 18px 52px;
+    }
+
+    .hero {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 36px;
+      box-shadow: 0 20px 60px rgba(31, 54, 82, 0.10);
+      display: grid;
+      grid-template-columns: 1.4fr 0.8fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--brand);
+      background: #eef5fa;
+      border: 1px solid #d7e7f1;
+      border-radius: 999px;
+      padding: 7px 12px;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(36px, 6vw, 64px);
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+      color: var(--brand);
+    }
+
+    .subtitle {
+      margin: 12px 0 0;
+      font-size: 22px;
+      font-weight: 700;
+      color: #24364d;
+    }
+
+    .tags {
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .promise {
+      margin: 22px 0 0;
+      font-size: 18px;
+      color: #32445b;
+      max-width: 720px;
+    }
+
+    .contact-strip {
+      margin-top: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .contact-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--brand);
+      background: #f4f8fb;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 9px 13px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .actions {
+      margin-top: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      border-radius: 14px;
+      padding: 13px 18px;
+      font-weight: 800;
+      border: 1px solid transparent;
+      transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn.primary {
+      background: var(--brand);
+      color: #fff;
+      box-shadow: 0 12px 24px rgba(15, 61, 95, .20);
+    }
+
+    .btn.secondary {
+      background: #fff;
+      color: var(--brand);
+      border-color: var(--line);
+    }
+
+    .profile-card {
+      border-radius: 24px;
+      background: linear-gradient(145deg, #0f3d5f, #16324c);
+      color: #fff;
+      padding: 26px;
+      min-height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .profile-card::after {
+      content: "";
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: rgba(212, 154, 42, .24);
+      position: absolute;
+      right: -50px;
+      bottom: -55px;
+    }
+
+    .photo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .profile-photo {
+      width: 118px;
+      height: 118px;
+      border-radius: 28px;
+      object-fit: cover;
+      object-position: center top;
+      border: 2px solid rgba(255,255,255,.55);
+      box-shadow: 0 16px 30px rgba(0,0,0,.22);
+      background: rgba(255,255,255,.12);
+    }
+
+    .photo-caption {
+      font-size: 14px;
+      line-height: 1.35;
+      color: rgba(255,255,255,.82);
+      font-weight: 700;
+    }
+
+    .photo-caption strong {
+      display: block;
+      font-size: 22px;
+      color: #fff;
+      margin-bottom: 3px;
+    }
+
+    .profile-card h2 {
+      margin: 22px 0 8px;
+      font-size: 25px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .profile-card p {
+      margin: 0;
+      color: rgba(255,255,255,.82);
+      position: relative;
+      z-index: 1;
+    }
+
+    .profile-actions {
+      margin-top: 22px;
+      display: grid;
+      gap: 10px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .profile-cv-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 58px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, var(--accent), #f4c15f);
+      color: #102338;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: .01em;
+      box-shadow: 0 16px 34px rgba(0,0,0,.28);
+      border: 1px solid rgba(255,255,255,.55);
+    }
+
+    .profile-cv-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .profile-note {
+      text-align: center;
+      font-size: 13px;
+      color: rgba(255,255,255,.76);
+    }
+
+    .grid {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .box {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 24px;
+      box-shadow: 0 10px 30px rgba(31, 54, 82, .07);
+    }
+
+    .box h3 {
+      margin: 0 0 10px;
+      color: var(--brand);
+      font-size: 19px;
+    }
+
+    .box p, .box li {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .wide {
+      margin-top: 18px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      box-shadow: 0 10px 30px rgba(31, 54, 82, .07);
+    }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .pill {
+      background: var(--soft);
+      color: #263a52;
+      border: 1px solid var(--line);
+      padding: 8px 11px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    footer {
+      margin-top: 24px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 14px;
+    }
+
+    footer a { color: var(--brand); font-weight: 700; text-decoration: none; }
+
+    @media (max-width: 820px) {
+      .hero, .wide { grid-template-columns: 1fr; }
+      .grid { grid-template-columns: 1fr; }
+      .hero { padding: 24px; }
+      .page { padding-top: 18px; }
+      .photo-wrap { align-items: flex-start; }
+      .profile-photo { width: 104px; height: 104px; border-radius: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Executive Corporate Trainer • Mentor • Consultant</div>
+        <h1>Deepak Gupta</h1>
+        <p class="subtitle">AI, GenAI, Agentic AI, .NET, Azure & Enterprise Technology Enablement</p>
+        <p class="tags">AI • GenAI • Agentic AI • .NET • Azure • Integration • Retail IT • Data & BI</p>
+        <p class="promise">
+          With 20+ years of experience, I help organizations convert complex technology into practical capability through project-oriented training, guided implementation and enterprise-context mentoring.
+        </p>
+        <div class="actions">
+          <a class="btn secondary" href="https://www.linkedin.com/in/deepakida/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn secondary" href="https://github.com/DEEPAKRNPGUPTA" target="_blank" rel="noopener">GitHub</a>
+        </div>
+        <div class="contact-strip" aria-label="Contact details">
+          <a class="contact-chip" href="tel:+919663718486">📞 +91 9663718486</a>
+          <a class="contact-chip" href="mailto:deepak@trainuprofessional.com">✉️ deepak@trainuprofessional.com</a>
+        </div>
+      </div>
+
+      <aside class="profile-card">
+        <div>
+          <div class="photo-wrap">
+            <img class="profile-photo" src="deepak-photo.png" alt="Deepak Gupta professional photo" />
+            <div class="photo-caption">
+              <strong>Deepak Gupta</strong>
+              20+ Years • Enterprise AI & .NET Enablement
+            </div>
+          </div>
+          <div class="profile-actions">
+            <a class="profile-cv-btn" href="Deepak_Gupta_CV_Fortes.pdf" target="_blank" rel="noopener">View / Download CV</a>
+            <div class="profile-note">Opens the full PDF profile</div>
+          </div>
+          <h2>Training + Consulting + Implementation Thinking</h2>
+          <p>Practical learning journeys for developers, architects, managers and business teams.</p>
+        </div>
+        <p>Bangalore, India • Remote / Onsite Corporate Delivery<br><strong>Call / WhatsApp: +91 9663718486</strong></p>
+      </aside>
+    </section>
+
+    <section class="grid">
+      <div class="box">
+        <h3>Training Forte</h3>
+        <p>Corporate programs, leadership enablement, learning paths, hands-on labs and day-wise TOC design.</p>
+      </div>
+      <div class="box">
+        <h3>Consulting Forte</h3>
+        <p>Use-case discovery, AI adoption roadmap thinking, guided implementation and client-specific capability building.</p>
+      </div>
+      <div class="box">
+        <h3>Engineering Forte</h3>
+        <p>AI/ML/LLM/Agentic AI with .NET, Azure, integration, Retail IT, data and enterprise architecture context.</p>
+      </div>
+    </section>
+
+    <section class="wide">
+      <div>
+        <h3>Core Enablement Areas</h3>
+        <div class="pill-list">
+          <span class="pill">AI Foundations</span>
+          <span class="pill">Machine Learning</span>
+          <span class="pill">LLM / GenAI</span>
+          <span class="pill">Agentic AI</span>
+          <span class="pill">RAG</span>
+          <span class="pill">Prompt Engineering</span>
+          <span class="pill">AI-assisted SDLC</span>
+          <span class="pill">Python</span>
+          <span class="pill">.NET / C#</span>
+          <span class="pill">Azure</span>
+          <span class="pill">BizTalk</span>
+          <span class="pill">Retail IT</span>
+        </div>
+      </div>
+      <div>
+        <h3>Signature Approach</h3>
+        <ul>
+          <li>Concept → demo → hands-on lab → enterprise scenario → reusable checklist.</li>
+          <li>Custom TOCs, participant-level mapping and practical learning assets.</li>
+          <li>Comfortable with developers, architects, business stakeholders and leadership teams.</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      Contact: <a href="tel:+919663718486">+91 9663718486</a> •
+      <a href="mailto:deepak@trainuprofessional.com">deepak@trainuprofessional.com</a> •
+      <a href="https://www.linkedin.com/in/deepakida/" target="_blank" rel="noopener">linkedin.com/in/deepakida</a>
+    </footer>
+  </main>
+</body>
+</html>
